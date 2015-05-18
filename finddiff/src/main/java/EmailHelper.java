@@ -17,12 +17,12 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 public class EmailHelper {
-	public static void send_email() throws IOException, AddressException,
+	public static void send_email(String ss) throws IOException, AddressException,
 			MessagingException {
 
 		String to = "948053013@qq.com";
 		String subject = "subject";
-		String content = "content";
+		String content = ss;
 		Properties properties = new Properties();
 		properties.put("mail.smtp.host", "smtp.qq.com");
 		properties.put("mail.smtp.port", "25");
