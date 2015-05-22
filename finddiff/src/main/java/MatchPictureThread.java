@@ -194,13 +194,13 @@ public class MatchPictureThread extends Thread {
 		}
 		
 		// 先判断一个较小的矩形， 然后向右，向下扩展
-		final int miniRectX = x + 6;
-		final int miniRectY = y + 6;
+		final int miniRectX = x + 5;
+		final int miniRectY = y + 5;
 		if (miniRectX >= first.getWidth() || miniRectY >= first.getHeight()) {
 			return;
 		}
 		
-		if (!diffRect(first, secord, new Rectangle(x, y, 6, 6))) {
+		if (!diffRect(first, secord, new Rectangle(x, y, 5, 5))) {
 			return;
 		}
 

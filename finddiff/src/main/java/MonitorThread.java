@@ -30,8 +30,9 @@ public class MonitorThread extends Thread {
 				} catch (MessagingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
+				} 
 				break;
+
 			} else {
 				try {
 					sleep(600000);
@@ -48,7 +49,7 @@ public class MonitorThread extends Thread {
 		FileReader fr = null;
 		try {
 			//这里填日志文件路径
-			fr = new FileReader("d:\\finddiff\\log.log");
+			fr = new FileReader(CommonUtils.getBasePath() + "log.log");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

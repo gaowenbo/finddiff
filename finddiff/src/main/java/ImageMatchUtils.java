@@ -64,16 +64,14 @@ public class ImageMatchUtils {
 	public static BufferedImage getImage(String name){
 		FileInputStream fis = null;
 		try {
-			fis = new FileInputStream( name);
+			fis = new FileInputStream(name);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			logger.error(e.getMessage());
 		}
 		 
 		try {
 			return ImageIO.read(fis);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			logger.error(e.getMessage());
 		}
 		return null;
