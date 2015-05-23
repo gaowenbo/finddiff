@@ -48,12 +48,8 @@ public class RestartOnError extends Thread {
 				if (position != null) {
 					int offsetX = Integer.parseInt(strs[1]);
 					int offsetY = Integer.parseInt(strs[2]);
-					try {
-						InputUtils.click(offsetX, offsetY);
-					} catch (AWTException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					InputUtils.click(offsetX, offsetY);
+					
 				}
 			}
 			try {

@@ -9,7 +9,7 @@ public class CommonUtils {
 	}
 
 	public static String getScriptPath() {
-		return CommonUtils.getBasePath() + "script\\start.Q";
+		return "C:\\Program Files (x86)\\按键精灵2014\\QMScript\\1\\start.Q";
 	}
 	
 }

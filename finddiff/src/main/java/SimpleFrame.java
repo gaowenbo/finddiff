@@ -9,6 +9,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 class SimpleFrame extends JFrame implements KeyListener{
+	
     private JTextArea text=new JTextArea();
     public SimpleFrame(){
         super.setTitle("Welcome！");
@@ -27,22 +28,19 @@ class SimpleFrame extends JFrame implements KeyListener{
         new StartGameThread().start();
         new MonitorThread().start();
     }
-    @Override
-    public void keyTyped(KeyEvent e) {
-        text.append("输入的内容是:"+e.getKeyChar()+"\n");
-        
-    }
-    @Override
-    public void keyPressed(KeyEvent e) {
-    	//a
-    	if (e.getKeyCode() == 65) {
-//    		new MatchPictureThread().start();
-    	}
-        
-    }
-    @Override
-    public void keyReleased(KeyEvent e) {
-        // TODO Auto-generated method stub
-        text.append("键盘“"+KeyEvent.getKeyText(e.getKeyCode())+"”键松开\n");
-    }
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 }

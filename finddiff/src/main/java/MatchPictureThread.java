@@ -164,7 +164,6 @@ public class MatchPictureThread extends Thread {
 				InputUtils.click(firstRect.x +clickX, firstRect.y +clickY);
 			}
 			
-			InputUtils.click(firstRect.x - 20, firstRect.y - 130);
 			sleep(1500);
 		} catch (HeadlessException e) {
 			logger.error(e.getMessage());

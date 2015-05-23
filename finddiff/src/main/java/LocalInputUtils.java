@@ -12,13 +12,20 @@ public class LocalInputUtils {
 		}
 		return robot;
 	}
-	public static void click(int x, int y) throws AWTException {
-		Robot robot = getRobot();
-		robot.mouseMove(x, y);
-		robot.delay(100);
-		robot.mousePress(InputEvent.BUTTON1_MASK);
-		robot.delay(100);
-		robot.mouseRelease(InputEvent.BUTTON1_MASK);
-		robot.delay(100);
+	public static void click(int x, int y) throws InterruptedException {
+		click(x, y, true);
 	}
+	public static void click(int x, int y, boolean needSafeMove) throws InterruptedException {
+		MouseInterface mouse = MouseInterface.getInstance();
+		mouse.move(x, y);
+		Thread.sleep(80);
+		mouse.mouseDown();
+		Thread.sleep(80);
+		mouse.mouseUp();
+		Thread.sleep(80);
+		if (needSafeMove) {
+			mouse.move(0, 0);
+		}
+	}
+	
 }
